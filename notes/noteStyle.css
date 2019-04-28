@@ -2,3 +2,29 @@
   color: #bbb;
   font-size: 10px;
 }
+
+li{
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+table{
+  border: solid 1px;
+  background: #eee;
+}
+th{
+  border: solid 1px;
+  background: #ccc;
+}
+td{
+  border: solid 1px;
+  background: #fff;
+}
+
+tr:nth-child(odd){
+  background: #eee;
+}
+tr:nth-child(even){
+  background: #ddd;
+}

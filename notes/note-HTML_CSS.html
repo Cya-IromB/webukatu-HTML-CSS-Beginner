@@ -20,22 +20,27 @@
     <h3>出てきたHTMLタグ</h3>
     <p>*headタグやhtmlタグなどの、当たり前にあるタグはここには載せない。</p>
     <p class="tukkomi">(ぶっちゃけ自分が分かればいいっていうアレ)</p>
-    <ul>
+    <ul><!--多用するhtmlタグ一覧-->
       <li>【img】src>画像の場所と名前 alt>テキストで表示される時の代替テキスト title>マウスを重ねた時の説明 <br />whidth/heigth>横幅と高さ(%推奨) border>枠の太さを指定 <br />-> 画像を表示させる。altとtitleを間違えやすい <br></li>
 
-      <li>【a】href>URI name>xxxで転移先としての目印を作り、#xxxでリンクを踏んだ時の転移先を指定する <br />->アンカーのa。href属性で指定したページへ飛ぶ。name属性で指定したジャンプはファイルを跨いでも出来るが、aタグ同士でしかできない。 <br></li>
+      <li>【a】href>URI name>xxxで転移先としての目印を作り、#xxxでリンクを踏んだ時の転移先を指定する <br />->アンカーのa。href属性で指定したページへ飛ぶ。name属性で指定したジャンプはファイルを跨いでも出来るが、aタグ同士でしかできない。 </li>
+
+
 
       <li>【table】border>枠線 width>横幅 cellspacing>セル同士の隙間 cellpadding>セル同士の間隔 bordercolor>枠線の色　<br>
       ->テーブルを定義する。具体的な中身はtr一つで一つの行を、thは見出し(タイトル)を表すセルで、tdは中身(データ/文章)を示す。 <br></li>
 
+      <li>【thead】tableタグのヘッダー部分に当たる行を囲む。</li>
+
       <li>【tr】横一行の定義。trタグでthとtdを入れ子にすることで表を表現できる。 <br></li>
 
-      <li>【th/td】align>文字揃え colspan>指定した分だけ横のセルが繋がる rowspan>指定した分だけ縦のセルが繋がる<br />thは見出しの定義、tdはデータ <br></li>
+      <li>【th/td】align>文字揃え colspan>指定した分だけ横のセルが繋がる rowspan>指定した分だけ縦のセルが繋がる<br />thは見出しの定義、tdはデータ</li>
+      <li>【tfooter】tableタグのフッター部分。</li>
 
       <li>【ul/ol>li】おなじみリストタグ。olだと番号が付く。<br></li>
-
-      <li>【form】>【name>変数名。 action>送る先の指定。メジャーなのはphpファイルを選択する method>POST/GET】
-        <ul>-input type=-
+      <li>【form】>【name>変数名。 action>送る先の指定。メジャーなのはphpファイルを選択する method>POST/GET】</li>
+      <li>-input type-</li>
+        <ul>
           <li>【text】</li>
           <li>【submit】</li>
           <li>【checkbox】->複数</li>
@@ -44,15 +49,69 @@
           <li>【file】</li>
         </ul>
 
-      </li>【select】>【option value=】
+      <li>【select】>【option value=】->リストで表示された中から選択</li>
+      <li>【textarea】コメント用のテキストボックスを作る</li>
+      <ul>
+        <li>【autofocus】</li>
+        <li>【cols】</li>
+        <li>【rows】</li>
+        <li>【maxlength】</li>
+        <li>【placeholder】</li>
+        <li>【required】</li>
+      </ul>
+    </ul>
 
+    <p>htmlタグ(セクション別)</p>
+    <ul><!--section系-->
+      <li>【header】</li>
+      <li>【article】</li>
+      <li>【aside】</li>
+      <li>【footer】</li>
+      <li>【nav】</li>
+      <li>【section】-> その部分の意味を表す見出しを付けることができない場合には、sectionで囲むのは適切ではないかも。<br>
+        section &lt; article,aside,nav</li>
+      <li>【address】</li>
+      <li>【main】->メインコンテンツであることを示す。多分article以上に外側に配置される。</li>
+    </ul>
+
+    <p>metaタグ</p>
+    <ul><!--metaタグ系-->
+      <li>【meta charset="UTF-8"】</li>
+      <li>【meta name="keywords" content=""】->カンマ区切りで検索キーワードを列挙する</li>
+      <li>【meta name="description" content=""】->そのサイトの説明</li>
+      <li>【meta name="robots" content=""】-> 検索ロボットにどの程度の許可を与えるか記述する。複数の命令を与える場合「,」で区切る。</li>
+      <ul>
+        <li>【noindex】  -> Googleなどの検索結果に表示して欲しくない時に使う。</li>
+        <li>【nofollow】 -> robotにリンク先へ行くことを許可しない。</li>
+        <li>【noarchive】-> キャッシュに保存してほしくない時に使う。使い所は常に最新の状態に在ることが望まれるページ。</li>
+      </ul>
+      <li>【meta name="author" content=""】-> その文章の作者を表す。ただの著名</li>
+      <li>【meta name="generator" content=""】-> 何の文章自動生成ツールで作られた文章なのかを著名する。</li>
+      <li>【meta http-equiv="refresh" content="n; url=xxxx.html"】-> n秒後、xxxx.htmlのページへ移行</li>
+      <li>【meta http-equiv="refresh" content="n"】-> n秒後、再読み込み</li>
+      <p class="tukkomi">w3.orgによれば、 meta要素によるrefreshを多用するウェブサイトは、検索エンジンのリストから削除されることがあるらしい。 それを避けたい場合には、代わりに301リダイレクトを使用する。</p>
+      <li>【meta name="application-name" content=""】->そのページがウェブアプリケーションである場合、これを記述する。</li>
       <li>【】</li>
-      <li>【】</li>
-      <li>【】</li>
-      <li>【】</li>
-      <li>【】</li>
-      <li>【】</li>
-      <li>【】</li>
+    </ul>
+
+    <h3>-CSS-</h3>
+    <p>優先順位</p>
+    <ol>
+      <li>p{color:red !important;} -> 強制する</li>
+      <li>タグ内へ直接記述</li>
+      <li>ID</li>
+      <li>クラス</li>
+      <li>要素</li>
+    </ol>
+
+    <ul>
+      <li>【color】</li>
+      <li>【backgroung】</li>
+      <li>【padding】</li>
+      <li>【border】</li>
+      <li>【margin】</li>
+      <li>【position】</li>
+      <li>【float】</li>
       <li>【】</li>
       <li>【】</li>
       <li>【】</li>
@@ -60,7 +119,116 @@
       <li>【】</li>
     </ul>
 
-    <h2>出てきたCSSの命令</h2>
+    <h3>疑似クラス</h3>
+    <p>できること基本</p>
+    <ul>
+      <li>前後に何かくっつける</li>
+      <li>リストの装飾で特定行だけ指定できる</li>
+      <li>floatの解除</li>
+    </ul>
 
+    <p>-疑似クラス一覧-</p>
+    <table class="table">
+      <tr>
+        <th>分類</th>
+        <th>クラス</th>
+        <th>説明</th>
+      </tr>
+      <!--動的---------------------------------------------------------------------------------->
+      <tr>
+        <th rowspan="5">動的</th>
+        <td>:link</td>
+        <td>未訪問のリンク</td>
+      </tr>
+      <tr>
+        <td>:visited</td>
+        <td>訪問済みリンク</td>
+      </tr>
+      <tr>
+        <td>:active</td>
+        <td>クリックされた</td>
+      </tr>
+      <tr>
+        <td>:hover</td>
+        <td>マウスポインタが乗っている</td>
+      </tr>
+      <tr>
+        <td>:focus</td>
+        <td>フォーカスされた</td>
+      </tr>
+
+      <!--構造---------------------------------------------------------------------------------->
+      <tr>
+        <th rowspan="12">構造</th>
+        <td>:first-child</td>
+        <td>最初の要素(親要素の種類は無関係)</td>
+      </tr>
+      <tr>
+        <td>:last-child</td>
+        <td>最後の要素</td>
+      </tr>
+      <tr>
+        <td>:first-of-type</td>
+        <td>親要素と同一種類の要素のうち、最初の要素</td>
+      </tr>
+      <tr>
+        <td>:last-of-type</td>
+        <td>親要素と同一種類の要素のうち、最後の要素</td>
+      </tr>
+      <tr>
+        <td>:nth-child(an+b)</td>
+        <td>最初からan+b番目の要素。(odd)で奇数、(even)で偶数。</td>
+      </tr>
+      <tr>
+          <td>:nth-last-child(an+b)</td>
+          <td>最後からan+b番目の要素</td>
+      </tr>
+      <tr>
+        <td>:nth-of-type(num)</td>
+        <td>親要素と同一種類の要素のうち、最初からan+b番目の要素</td>
+      </tr>
+      <tr>
+        <td>:only-child</td>
+        <td>ひとつだけの要素</td>
+      </tr>
+      <tr>
+        <td>:only-of-type</td>
+        <td>親要素と同一種類の要素のうち、ひとつだけの要素</td>
+      </tr>
+      <tr>
+        <td>:root</td>
+        <td>html全体を指定する(要るのかこれ…)</td>
+      </tr>
+      <tr>
+        <td>:empty</td>
+        <td>空の要素(タグ間に何もない要素)を指定</td>
+      </tr>
+      <tr>
+          <td>:blank</td>
+          <td>空の要素(タグ間に何もない要素*空白は可)を指定</td>
+      </tr>
+      <tr>
+        <th>aタグと併用</th>
+        <td>:targer</td>
+        <td>＜a href="#x"＞から＜a id="x"＞へ移動した時、移動先の要素に作用する。</td>
+      </tr>
+      <tr>
+        <th rowspan="4">UIの状態</th>
+        <td>:enabled</td>
+        <td>disabled属性が指定されていない</td>
+      </tr>
+      <tr>
+        <td>:disabled</td>
+        <td>disabled属性が指定されている</td>
+      </tr>
+      <tr>
+        <td>:checked</td>
+        <td>チェックされている(*フォームそのものには適用されないので、labelタグ等と併用する)</td>
+      </tr>
+      <tr>
+        <td>:indeterminate</td>
+        <td>JavaScriptでindeterminate属性がtrueになっている</td>
+      </tr>
+    </table>
   </body>
 </html>
