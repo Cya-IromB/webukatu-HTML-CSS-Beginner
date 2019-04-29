@@ -1,0 +1,52 @@
+body{
+  margin: 0;
+  padding: 0;
+  line-height: 120%;
+}
+
+header{
+  margin-bottom: 15px;
+  background: #ddd;
+  height: 150px;
+}
+
+header li{
+}
+
+.navigation-wrap{
+  position: relative;
+  overflow: hidden;
+}
+.navigation{
+  position: absolute;
+  float:left;
+}
+
+main{
+  background: #bbb;
+}
+footer{
+  background: #222;
+  color:#eee;
+}
+footer a{
+  color: #eee;
+}
+
+.topIcon{
+  position: absolute;
+  top: 10px;
+  left:10px;
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  background: #222;
+  font-size: 30px;
+  height: 60px;
+  width: 140px;
+  border-radius: 5px;
+  line-height: 60px;
+}
+.topIcon-Link{
+  text-decoration: none;
+  color: #0e0;
+}
