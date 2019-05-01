@@ -1,25 +1,91 @@
 body{
   margin: 0;
   padding: 0;
-  line-height: 120%;
 }
 
 header{
   margin-bottom: 15px;
-  background: #ddd;
-  height: 150px;
-}
-
-header li{
-}
-
-.navigation-wrap{
-  position: relative;
+  background: #222;
+  height: 100px;
   overflow: hidden;
 }
-.navigation{
-  position: absolute;
-  float:left;
+
+#top-icon{
+  position: relative;
+  top: 5px;
+  left:10px;
+  font-size: 30px;
+  float: left;
+  overflow: hidden;
+}
+
+.topIcon-Link{
+  font-family: 'Rajdhani', sans-serif;
+  text-decoration: none;
+  color: #0e0;
+  display: block;
+  text-align: center;
+  background: #222;
+  border: solid 2px #0a0;
+  border-radius: 5px;
+  line-height: 60px;
+  padding: 10px;
+  line-height: 100%;
+}
+
+.topIcon-Link:hover{
+  text-decoration: solid;
+  color: #0f0;
+  background: #444;
+  border-color: #0e0;
+}
+
+#top-flavor{
+  top: 32px;
+  background: #fff;
+  float: left;
+  margin-left: 50px;
+  padding: 2px;
+  padding-right: calc(2px + 2px);
+  border: 2px #ccc solid;
+  border-radius: 10%;
+  color: #f22;
+  position: relative;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px #811;
+}
+
+#top-nav{
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  top: 5px;
+  overflow: hidden;
+}
+#top-nav li{
+  list-style: none;
+  float: left;
+}
+
+#top-nav li > a{
+  color: #0e0;
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+  border: solid 2px #0a0;
+  padding: 8px;
+  margin-right: 10px;
+
+  text-align: center;
+  border-radius: 5px;
+  background: #222;
+}
+#top-nav li > a:hover{
+  text-decoration: solid;
+  color: #0f0;
+  background: #444;
+  border-color: #0e0;
 }
 
 main{
@@ -31,22 +97,4 @@ footer{
 }
 footer a{
   color: #eee;
-}
-
-.topIcon{
-  position: absolute;
-  top: 10px;
-  left:10px;
-  font-family: 'Rajdhani', sans-serif;
-  text-align: center;
-  background: #222;
-  font-size: 30px;
-  height: 60px;
-  width: 140px;
-  border-radius: 5px;
-  line-height: 60px;
-}
-.topIcon-Link{
-  text-decoration: none;
-  color: #0e0;
 }
