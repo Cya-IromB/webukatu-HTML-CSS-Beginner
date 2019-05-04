@@ -7,22 +7,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
 
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script>
+      jQuery(function () {
+        $("#jq-header").load("_header.html");
+        $("#jq-sidebar").load("_sidebar.html");
+        $("#jq-footer").load("_footer.html");
+      });
+    </script>
   </head>
 
   <body>
-    <header><!--==================================================================-->
-      <h1 id="top-icon" ><a href="index.html" class="topIcon-Link">TETUNOU</a></h1>
-      <div id="top-flavor">Ver.1.0</div>
-      <nav id="top-nav">
-        <ul>
-          <li class="on"><a href="index.html">INDEX</a></li>
-          <li class="on"><a href="about.html">ABOUT</a></li>
-          <li class="on"><a href="contents.htm>">CONTENTS</a></li>
-          <li class="on"><a href="skills.html">SKILLS</a></li>
-          <li class="on"><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!--header import-->
+    <div id="jq-header"></div>
+    <!--header import/-->
 
     <main><!--==================================================================-->
     <img src="http://placehold.it/720x240/?text=dummy" id="top-banner">
@@ -49,14 +47,14 @@
 
 
         </article>
-        <aside id="main-sidebar" class="mainPanel">
-
-        </aside>
+        <!--sidebar import-->
+        <div id="jq-sidebar"></div>
+        <!--sidebar import/-->
       </section>
     </main>
 
-    <footer id="footer"><!--==================================================================-->
-      copyright <a href="index.html">TETUNOU</a> 2019.
-    </footer>
+    <!--footer import-->
+    <div id="jq-footer"></div>
+    <!--footer import/-->
   </body>
 </html>
