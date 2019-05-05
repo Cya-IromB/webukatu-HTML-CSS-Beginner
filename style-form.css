@@ -1,0 +1,8 @@
+#form-block{
+  text-align: left;
+  margin: 1%;
+  padding: 1%;
+  border: solid 2px #0a0;
+  width: 40%;
+  box-sizing: inline-block;
+}
