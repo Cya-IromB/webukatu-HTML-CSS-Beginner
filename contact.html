@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rajdhani:700" rel="stylesheet">
 
     <script src="js/jquery-3.4.0.min.js"></script>
+
     <script>
       jQuery(function () {
         $("#jq-header").load("_header.html");
@@ -30,27 +31,30 @@
             <form action="index.html" method="POST">
 
               <div>おなまえ: <span class="hissu">※必須 </span> <span class="check-none">--</span></div>
-              <input type="text" name="name" id="">
+              <input type="text" name="name" class="form" id="name" placeholder="かばやき" required>
 
               <div>Email: <span class="ninni">※任意</span> <span class="check-none">--</span></div>
-              <input type="email" name="email" id="">
+              <input type="email" name="email" class="form" id="email" placeholder="xxxxxx@xxx.com">
 
               <div>コメント: <span class="hissu">※必須 </span><span class="check-none">--</span></div>
-              <textarea name="comment" id="" cols="30" rows="10"></textarea>
+              <textarea name="comment" class="form" id="comment" cols="30" rows="10" placeholder="おっす！！" required></textarea>
+              <div><span id="js-comment-length">0</span>/100</div>
 
               <div>あなたの好きなものは？: <span class="ninni">※任意 </span><span class="check-none">--</span></div>
-              <input type="checkbox" name="like" value="動物">動物
-              <input type="checkbox" name="like" value="人">人
-              <input type="checkbox" name="like" value="機械">機械
+              <label class="checkbox">
+                <input type="checkbox" name="like" value="動物">動物
+                <input type="checkbox" name="like" value="人">人
+                <input type="checkbox" name="like" value="機械">機械
+              </label>
               <br><br>
-
               <div>あなたはどれ？ <span class="hissu">※必須 </span><span class="check-none">--</span></div>
-              <input type="radio" name="whatyou" value="男">男
-              <input type="radio" name="whatyou" value="女">女
-              <input type="radio" name="whatyou" value="男かも">男かも
-              <input type="radio" name="whatyou" value="女かも">女かも
-              <input type="radio" name="whatyou" value="人間じゃないです">人間じゃないです
-
+              <label class="radio">
+                <input type="radio" name="whatyou" value="男">男
+                <input type="radio" name="whatyou" value="女">女
+                <input type="radio" name="whatyou" value="男かも">男かも
+                <input type="radio" name="whatyou" value="女かも">女かも
+                <input type="radio" name="whatyou" value="人間じゃないです">人間じゃないです
+              </label>
 
 
               <input type="submit" name="submit" value="送るッ！！">
@@ -68,5 +72,6 @@
     <!--footer import-->
     <div id="jq-footer"></div>
     <!--footer import/-->
+    <script src="js/script.js"></script>
   </body>
 </html>
