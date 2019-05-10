@@ -16,6 +16,7 @@
   background: #222;
   color: #0f0;
   border: solid 2px #0a0;
+  font-size: 14px;
 
 }
 .form:focus{
@@ -27,10 +28,32 @@
   color: #999;
 }
 
+input[type="submit"]{
+  width: 100%;
+  height: 30%;
+  color: #eee;
+  background: #652;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/*------------------------------------------------------------*/
 .js-length-ok{
   color: #eee;
 }
 
 .js-length-ng{
-  color: #e08;
+  color: #e28;
+}
+
+/*------------------------------------------------------------*/
+.js-check-none{
+  color: #eee;
+}
+.js-check-ok{
+  color: #0ea;
+}
+.js-check-ng{
+  color: #e28;
 }

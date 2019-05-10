@@ -28,34 +28,37 @@
       <section  id="middle">
         <article id="main-article" class="mainPanel">
           <div id="form-block">
-            <form action="index.html" method="POST">
+            <form action="contact.html" method="POST">
 
-              <div>おなまえ: <span class="hissu">※必須 </span> <span class="check-none">--</span></div>
-              <input type="text" name="name" class="form" id="name" placeholder="かばやき" required>
-
-              <div>Email: <span class="ninni">※任意</span> <span class="check-none">--</span></div>
-              <input type="email" name="email" class="form" id="email" placeholder="xxxxxx@xxx.com">
-
-              <div>コメント: <span class="hissu">※必須 </span><span class="check-none">--</span></div>
-              <textarea name="comment" class="form" id="comment" cols="30" rows="10" placeholder="おっす！！" required></textarea>
-              <div><span id="js-comment-length">0</span>/100</div>
-
-              <div>あなたの好きなものは？: <span class="ninni">※任意 </span><span class="check-none">--</span></div>
-              <label class="checkbox">
-                <input type="checkbox" name="like" value="動物">動物
-                <input type="checkbox" name="like" value="人">人
-                <input type="checkbox" name="like" value="機械">機械
+              <label>
+                <div>おなまえ: <span class="hissu">※必須 </span> <span id="js-name" class="js-check-none">--</span></div>
+                <input type="text" name="name" class="form" id="name" placeholder="かばやき" required>
               </label>
+
+              <label>
+                <div>Email: <span class="ninni">※任意</span> <span class="js-check-none">--</span></div>
+                <input type="email" name="email" class="form" id="email" placeholder="xxxxxx@xxx.com">
+              </label>
+
+              <label>
+                <div>コメント: <span class="hissu">※必須 </span><span id="js-comment" class="js-check-none">--</span></div>
+                <textarea name="comment" class="form" id="comment" cols="30" rows="10" placeholder="おっす！！" required></textarea>
+                <div><span id="js-comment-length">0</span>/100</div>
+              </label>
+
+              <div>あなたの好きなものは？: <span class="ninni">※任意 </span><span class="js-check-none">--</span></div>
+              <input type="checkbox" name="like" value="動物">動物
+              <input type="checkbox" name="like" value="人">人
+              <input type="checkbox" name="like" value="機械">機械
+
               <br><br>
-              <div>あなたはどれ？ <span class="hissu">※必須 </span><span class="check-none">--</span></div>
-              <label class="radio">
-                <input type="radio" name="whatyou" value="男">男
-                <input type="radio" name="whatyou" value="女">女
-                <input type="radio" name="whatyou" value="男かも">男かも
-                <input type="radio" name="whatyou" value="女かも">女かも
-                <input type="radio" name="whatyou" value="人間じゃないです">人間じゃないです
-              </label>
 
+              <div>あなたはどれ？ <span class="ninni">※任意</span><span id="js-who" class="js-check-none">--</span></div>
+              <input type="radio" name="whatyou" value="男">男
+              <input type="radio" name="whatyou" value="女">女
+              <input type="radio" name="whatyou" value="男かも">男かも
+              <input type="radio" name="whatyou" value="女かも">女かも
+              <input type="radio" name="whatyou" value="人間じゃないです">人間じゃないです
 
               <input type="submit" name="submit" value="送るッ！！">
             </form>
